@@ -1,0 +1,10 @@
+参考サイト
+
+Webページの取得
+http://www.atmarkit.co.jp/ait/articles/0506/10/news122.html
+
+指定されたURL(URI)からデータを文字列としてダウンロード
+https://dobon.net/vb/dotnet/internet/webclientopenread.html
+
+
+
