@@ -6,5 +6,27 @@ http://www.atmarkit.co.jp/ait/articles/0506/10/news122.html
 指定されたURL(URI)からデータを文字列としてダウンロード
 https://dobon.net/vb/dotnet/internet/webclientopenread.html
 
+VB.netで Html Agility Packを使ってみました。
+https://became-free.com/vbdotnet-html-agility-pack/
 
 
+        Dim sURL As String
+        Dim sHTML As String
+        Dim objWC As System.Net.WebClient
+        Dim objDOC As HtmlAgilityPack.HtmlDocument
+        Dim objNodes As HtmlAgilityPack.HtmlNodeCollection
+ 
+        '1ドルをGoogle Currency Converterで円に変換するURL
+        sURL = "https://www.google.com/finance/converter?a=1&from=usd&to=JPY"
+        objWC = New System.Net.WebClient()
+        sHTML = objWC.DownloadString(sURL)
+ 
+        objDOC = New HtmlAgilityPack.HtmlDocument()
+        objDOC.LoadHtml(sHTML)
+ 
+        'HTMLソースは「<span class=bld>110.5740 JPY</span>」となっています。
+        objNodes = objDOC.DocumentNode.SelectNodes("//span")
+ 
+        For Each node As HtmlAgilityPack.HtmlNode In objNodes
+            RichTextBox1.Text += node.InnerText
+        Next
