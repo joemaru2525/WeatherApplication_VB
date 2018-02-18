@@ -15,3 +15,7 @@ VB6 文字列操作
 http://cya.sakura.ne.jp/vb/string.htm
 
 
+アプリ画面
+
+
+![vbnet](https://user-images.githubusercontent.com/33685249/36351140-7f3687ea-14e8-11e8-8f9e-3a7be54236c9.png)
